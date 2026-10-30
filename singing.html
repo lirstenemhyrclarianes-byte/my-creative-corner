@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Singing Corner</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#FFF7FC; font-family:Arial, Helvetica, sans-serif; color:#4B2E5F;">
+
+    <!-- HEADER -->
+    <header style="background-color:#D8B4E2; padding:30px 15px; text-align:center;">
+
+        <h1 style="margin:0; font-size:38px; color:#4B2E5F;">
+            🎤 MY SINGING CORNER
+        </h1>
+
+        <p style="font-size:17px;">
+            Music • Art • Anime • Animation
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav style="background-color:#F3DDF7; text-align:center; padding:15px;">
+
+        <a href="myhome.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">HOME</a>
+
+        <a href="music.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">MUSIC</a>
+
+        <a href="singing.html" style="display:inline-block; background-color:#B04A7A; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">SINGING</a>
+
+        <a href="drawing.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">DRAWING</a>
+
+        <a href="anime.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIME</a>
+
+        <a href="animation.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIMATION</a>
+
+        <a href="about.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ABOUT ME</a>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main style="max-width:1000px; margin:40px auto; padding:20px;">
+
+        <!-- WHY I ENJOY SINGING -->
+        <section style="background-color:white; padding:30px; border-radius:25px; text-align:center; box-shadow:0 5px 15px #E4D4E8;">
+
+            <h2 style="color:#B04A7A; font-size:30px;">
+                🎶 Why I Enjoy Singing
+            </h2>
+
+            <img src="images/si.jpg"
+                 alt="Singing"
+                 style="width:100%; max-width:600px; height:300px; object-fit:cover; border-radius:20px;">
+
+            <p style="font-size:18px; line-height:1.7;">
+                Singing is one of the activities that I enjoy.
+                It allows me to express my emotions and have fun with music.
+            </p>
+
+        </section>
+
+
+        <!-- THINGS I ENJOY -->
+        <section style="margin-top:35px; padding:30px; background-color:#FCE7F3; border-radius:25px;">
+
+            <h2 style="text-align:center; color:#B04A7A;">
+                💗 Things I Enjoy About Singing
+            </h2>
+
+            <div style="text-align:center;">
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>🎵 Music</h3>
+                    <p>I enjoy singing along with songs I like.</p>
+                </div>
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>😊 Expression</h3>
+                    <p>Singing helps me express how I feel.</p>
+                </div>
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>🌟 Practice</h3>
+                    <p>Every song gives me a chance to improve.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SINGING VIDEO PLAYLIST -->
+        <section style="margin-top:35px; background-color:#EADCF3; padding:30px; border-radius:25px; text-align:center;">
+
+            <h2 style="color:#7B4B94;">
+                🎥 My Singing Video Playlist
+            </h2>
+
+            <p style="font-size:16px; line-height:1.7;">
+                Watch my singing videos or upload new videos to my playlist!
+            </p>
+
+
+            <!-- VIDEO PLAYER -->
+            <video id="singingPlayer"
+                   controls
+                   playsinline
+                   style="display:block; width:100%; max-width:800px; height:450px; object-fit:contain; background-color:black; border-radius:20px; margin:20px auto;">
+
+                <source src="videos/music.mp4" type="video/mp4">
+
+                Your browser does not support the video.
+
+            </video>
+
+
+            <!-- CURRENT VIDEO TITLE -->
+            <h3 id="videoTitle" style="color:#7B4B94; overflow-wrap:anywhere;">
+                🎵 My Singing Video
+            </h3>
+
+
+            <!-- UPLOAD BUTTON -->
+            <div style="margin:25px 0;">
+
+                <label for="videoUpload"
+                       style="display:inline-block; background-color:#7B4B94; color:white; padding:14px 24px; border-radius:25px; cursor:pointer; margin:5px;">
+
+                    ➕ Upload Videos
+
+                </label>
+
+                <input type="file"
+                       id="videoUpload"
+                       accept="video/*"
+                       multiple
+                       style="display:none;">
+
+            </div>
+
+
+            <!-- PLAYLIST CONTAINER -->
+            <div style="max-width:800px; margin:20px auto; padding:20px; background-color:white; border-radius:20px; text-align:left;">
+
+                <h3 style="color:#B04A7A; text-align:center;">
+                    🎶 My Playlist
+                </h3>
+
+                <p id="playlistMessage" style="text-align:center; color:#7B4B94;">
+                    Select a video or upload your own singing videos.
+                </p>
+
+                <div id="playlist">
+
+                    <!-- DEFAULT VIDEO -->
+                    <div style="padding:12px; background-color:#FCE7F3; border-radius:12px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+
+                        <button type="button"
+                                onclick="playVideo('videos/me.mp4', 'My Singing Video')"
+                                style="background:none; border:none; color:#4B2E5F; cursor:pointer; font-size:15px; text-align:left;">
+
+                            ▶ My Singing Video
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p style="font-size:14px; color:#4B2E5F; line-height:1.6;">
+                Note: Videos uploaded from your computer are temporary.
+                They will not remain in the playlist after you reload the page.
+            </p>
+
+        </section>
+
+
+        <!-- A LITTLE REMINDER -->
+        <section style="margin-top:35px; background-color:#FFF0F6; padding:30px; border-radius:25px; text-align:center;">
+
+            <h2 style="color:#A64D78;">
+                🌷 A Little Reminder
+            </h2>
+
+            <p style="font-size:18px; line-height:1.7;">
+                I do not have to be perfect to enjoy singing.
+                What matters is that I enjoy the music and continue practicing.
+            </p>
+
+        </section>
+
+
+        <!-- BACK TO HOME -->
+        <div style="text-align:center; margin-top:35px;">
+
+            <a href="myhome.html"
+               style="display:inline-block; background-color:#B04A7A; color:white; text-decoration:none; padding:14px 25px; border-radius:25px;">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer style="background-color:#D8B4E2; text-align:center; padding:25px; margin-top:50px;">
+
+        <p style="margin:0;">
+            © 2026 My Creative Corner
+        </p>
+
+    </footer>
+
+
+    <!-- PLAYLIST JAVASCRIPT -->
+    <script>
+
+        const player = document.getElementById("singingPlayer");
+        const videoTitle = document.getElementById("videoTitle");
+        const videoUpload = document.getElementById("videoUpload");
+        const playlist = document.getElementById("playlist");
+        const playlistMessage = document.getElementById("playlistMessage");
+
+        let uploadedVideos = [];
+
+        // PLAY A SELECTED VIDEO
+        function playVideo(source, title) {
+
+            player.pause();
+            player.src = source;
+            player.load();
+
+            videoTitle.textContent = "🎵 " + title;
+
+            player.play().catch(function () {
+                // The user can press Play if playback does not start automatically.
+            });
+
+        }
+
+
+        // UPLOAD VIDEOS
+        videoUpload.addEventListener("change", function () {
+
+            const files = Array.from(this.files);
+
+            files.forEach(function (file) {
+
+                if (!file.type.startsWith("video/")) {
+                    return;
+                }
+
+                const videoURL = URL.createObjectURL(file);
+
+                const video = {
+                    name: file.name,
+                    url: videoURL
+                };
+
+                uploadedVideos.push(video);
+
+
+                // PLAYLIST ITEM
+                const item = document.createElement("div");
+
+                item.style.cssText =
+                    "padding:12px; background-color:#FCE7F3; border-radius:12px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;";
+
+
+                // PLAY BUTTON
+                const playButton = document.createElement("button");
+
+                playButton.type = "button";
+                playButton.textContent = "▶ " + file.name;
+
+                playButton.style.cssText =
+                    "background:none; border:none; color:#4B2E5F; cursor:pointer; font-size:15px; text-align:left; overflow-wrap:anywhere;";
+
+                playButton.addEventListener("click", function () {
+
+                    playVideo(video.url, video.name);
+
+                });
+
+
+                // REMOVE BUTTON
+                const removeButton = document.createElement("button");
+
+                removeButton.type = "button";
+                removeButton.textContent = "✖ Remove";
+
+                removeButton.style.cssText =
+                    "background-color:#B04A7A; color:white; border:none; padding:8px 12px; border-radius:12px; cursor:pointer; flex-shrink:0;";
+
+                removeButton.addEventListener("click", function () {
+
+                    // Stop the video if it is currently selected.
+                    if (player.src === video.url) {
+
+                        player.pause();
+                        player.removeAttribute("src");
+                        player.load();
+
+                        videoTitle.textContent = "🎵 Select a singing video";
+
+                    }
+
+                    // Release the temporary video URL.
+                    URL.revokeObjectURL(video.url);
+
+                    // Remove the video from the uploaded list.
+                    uploadedVideos = uploadedVideos.filter(function (item) {
+                        return item !== video;
+                    });
+
+                    // Remove the playlist item.
+                    item.remove();
+
+                    // Update playlist message.
+                    if (playlist.children.length === 0) {
+                        playlistMessage.textContent =
+                            "Your playlist is empty. Upload a video to get started!";
+                    }
+
+                });
+
+
+                // ADD BUTTONS TO PLAYLIST ITEM
+                item.appendChild(playButton);
+                item.appendChild(removeButton);
+
+                playlist.appendChild(item);
+
+                playlistMessage.textContent =
+                    "Choose a video below to play it.";
+
+                // Automatically play the newly uploaded video.
+                playVideo(video.url, video.name);
+
+            });
+
+            // Allow the same file to be selected again.
+            this.value = "";
+
+        });
+
+    </script>
+
+</body>
+</html>

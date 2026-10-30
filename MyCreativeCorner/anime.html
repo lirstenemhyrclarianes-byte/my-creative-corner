@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anime Corner</title>
+</head>
+
+<body style="margin:0;background:#FFF7FC;font-family:Arial,Helvetica,sans-serif;color:#4B2E5F;line-height:1.6;">
+
+<header style="background:#D8B4E2;padding:24px 16px;text-align:center;">
+    <h1 style="margin:0;">🎌 My Anime Corner</h1>
+    <p style="margin:6px 0 0;">A little space for anime, art, videos, and inspiration</p>
+</header>
+
+<nav style="background:#F3DDF7;padding:12px;text-align:center;position:sticky;top:0;z-index:10;">
+    <a href="myhome.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">Home</a>
+    <a href="music.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">Music</a>
+    <a href="singing.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">Singing</a>
+    <a href="drawing.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">Drawing</a>
+    <a href="anime.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7557A8;color:white;text-decoration:none;">Anime</a>
+    <a href="animation.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">Animation</a>
+    <a href="about.html" style="display:inline-block;margin:5px;padding:8px 12px;border-radius:18px;background:#7B4B94;color:white;text-decoration:none;">About</a>
+</nav>
+
+<main style="max-width:1100px;margin:auto;padding:20px;">
+
+    <section style="background:white;padding:22px;border-radius:18px;margin:18px 0;box-shadow:0 4px 14px #6B3B7A12;">
+        <h2 style="margin-top:0;">Welcome to My Anime Corner ✨</h2>
+        <p>This is my personal space for anime, favorite characters, videos, and creativity.</p>
+        <img src="images/anime.jpg" alt="Anime artwork"
+             style="display:block;width:100%;max-width:650px;max-height:340px;object-fit:cover;margin:15px auto;border-radius:14px;"
+             onerror="this.style.display='none'">
+    </section>
+
+    <section style="background:white;padding:22px;border-radius:18px;margin:18px 0;box-shadow:0 4px 14px #6B3B7A12;">
+        <h2 style="margin-top:0;">💜 Why I Enjoy Anime</h2>
+        <ul>
+            <li>Interesting stories and unforgettable characters.</li>
+            <li>Beautiful art styles, animation, and music.</li>
+            <li>Different worlds that inspire my imagination.</li>
+            <li>Ideas that inspire my drawings and stories.</li>
+        </ul>
+    </section>
+
+    <!-- VIDEO PLAYLIST -->
+    <section style="background:white;padding:22px;border-radius:18px;margin:18px 0;box-shadow:0 4px 14px #6B3B7A12;">
+        <h2 style="margin-top:0;">🎬 My Video Playlist</h2>
+        <p>Upload videos from your device. Saved videos remain in this browser and can be played offline on the same device.</p>
+
+        <label for="videoUpload" style="display:block;font-weight:bold;margin:10px 0 5px;">Add video files</label>
+        <input id="videoUpload" type="file" accept="video/*" multiple
+               style="max-width:100%;padding:8px;background:#FBF4FD;border-radius:8px;">
+
+        <p id="videoStorageStatus" role="status" style="font-size:13px;"></p>
+
+        <video id="animePlayer" controls playsinline
+               style="display:block;width:100%;max-height:480px;background:#1D1422;border-radius:14px;margin-top:12px;"></video>
+
+        <p id="nowPlaying" style="font-weight:bold;">Choose a video from your playlist.</p>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" onclick="playPrevious()"
+                    style="border:0;border-radius:9px;padding:10px 14px;background:#E9D9EF;color:#4B2E5F;cursor:pointer;">⏮ Previous</button>
+            <button type="button" onclick="playNext()"
+                    style="border:0;border-radius:9px;padding:10px 14px;background:#7B4B94;color:white;cursor:pointer;">Next ⏭</button>
+            <button type="button" onclick="clearVideos()"
+                    style="border:0;border-radius:9px;padding:10px 14px;background:#F7DDE8;color:#7A274B;cursor:pointer;">Clear Playlist</button>
+        </div>
+
+        <div id="videoPlaylist" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px;"></div>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section style="background:white;padding:22px;border-radius:18px;margin:18px 0;box-shadow:0 4px 14px #6B3B7A12;">
+        <h2 style="margin-top:0;">🖼️ My Anime Image Gallery</h2>
+        <p>Upload and view your favorite anime images. Saved images can be viewed offline in the same browser on this device.</p>
+
+        <label for="imageUpload" style="display:block;font-weight:bold;margin:10px 0 5px;">Add images</label>
+        <input id="imageUpload" type="file" accept="image/*" multiple
+               style="max-width:100%;padding:8px;background:#FBF4FD;border-radius:8px;">
+
+        <p id="imageStorageStatus" role="status" style="font-size:13px;"></p>
+
+        <div id="imageGallery" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;"></div>
+    </section>
+
+    <section style="background:white;padding:22px;border-radius:18px;margin:18px 0;box-shadow:0 4px 14px #6B3B7A12;">
+        <h2 style="margin-top:0;">🎨 Anime and Creativity</h2>
+        <p>Anime inspires me to explore character design, colors, storytelling, and new drawing ideas.</p>
+        <a href="drawing.html" style="display:inline-block;background:#7B4B94;color:white;text-decoration:none;padding:10px 15px;border-radius:10px;">Explore Drawing</a>
+    </section>
+
+    <p style="text-align:center;">
+        <a href="myhome.html" style="display:inline-block;background:#7B4B94;color:white;text-decoration:none;padding:11px 18px;border-radius:12px;">← Back to Home</a>
+    </p>
+</main>
+
+<!-- IMAGE VIEWER -->
+<div id="imageViewer" role="dialog" aria-modal="true" aria-label="Image viewer"
+     style="display:none;position:fixed;inset:0;background:#160D1DEB;z-index:50;align-items:center;justify-content:center;padding:18px;">
+
+    <button type="button" onclick="closeImageViewer()" aria-label="Close image viewer"
+            style="position:absolute;top:14px;right:18px;border:0;border-radius:50%;width:42px;height:42px;font-size:24px;background:white;color:#4B2E5F;cursor:pointer;">×</button>
+
+    <button type="button" onclick="moveViewer(-1)" aria-label="Previous image"
+            style="position:absolute;left:12px;top:50%;border:0;border-radius:50%;width:42px;height:42px;font-size:23px;background:white;color:#4B2E5F;cursor:pointer;">‹</button>
+
+    <img id="viewerImage" alt="Selected gallery image"
+         style="max-width:85vw;max-height:85vh;object-fit:contain;border-radius:12px;">
+
+    <button type="button" onclick="moveViewer(1)" aria-label="Next image"
+            style="position:absolute;right:12px;top:50%;border:0;border-radius:50%;width:42px;height:42px;font-size:23px;background:white;color:#4B2E5F;cursor:pointer;">›</button>
+
+    <p id="viewerCaption" style="position:absolute;bottom:8px;left:60px;right:60px;text-align:center;color:white;"></p>
+</div>
+
+<footer style="background:#D8B4E2;text-align:center;padding:18px;margin-top:25px;">
+    <p style="margin:0;">Made with 💜 for My Anime Corner</p>
+</footer>
+
+<script>
+"use strict";
+
+/* LOCAL DATABASE */
+const DB_NAME = "MyAnimeCornerMediaDB";
+const DB_VERSION = 1;
+const STORE_NAME = "media";
+
+let db = null;
+let videos = [];
+let images = [];
+let activeVideoId = null;
+let viewerIndex = 0;
+let videoObjectUrls = [];
+let imageObjectUrls = [];
+
+function openMediaDB() {
+    return new Promise((resolve, reject) => {
+        if (!("indexedDB" in window)) {
+            reject(new Error("This browser does not support local storage."));
+            return;
+        }
+
+        const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+        request.onupgradeneeded = () => {
+            const database = request.result;
+
+            if (!database.objectStoreNames.contains(STORE_NAME)) {
+                const store = database.createObjectStore(STORE_NAME, {
+                    keyPath: "id",
+                    autoIncrement: true
+                });
+
+                store.createIndex("type", "type", { unique: false });
+            }
+        };
+
+        request.onsuccess = () => {
+            db = request.result;
+            resolve(db);
+        };
+
+        request.onerror = () => reject(request.error);
+    });
+}
+
+function dbRequest(mode, action) {
+    return new Promise((resolve, reject) => {
+        if (!db) {
+            reject(new Error("The database is not ready."));
+            return;
+        }
+
+        const transaction = db.transaction(STORE_NAME, mode);
+        const request = action(transaction.objectStore(STORE_NAME));
+
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+        transaction.onabort = () => reject(transaction.error);
+    });
+}
+
+function addMedia(record) {
+    return dbRequest("readwrite", store => store.add(record));
+}
+
+function getAllMedia() {
+    return dbRequest("readonly", store => store.getAll());
+}
+
+function deleteMedia(id) {
+    return dbRequest("readwrite", store => store.delete(id));
+}
+
+function clearMediaType(type) {
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(STORE_NAME, "readwrite");
+        const request = transaction.objectStore(STORE_NAME).openCursor();
+
+        request.onsuccess = event => {
+            const cursor = event.target.result;
+
+            if (!cursor) return;
+
+            if (cursor.value.type === type) {
+                cursor.delete();
+            }
+
+            cursor.continue();
+        };
+
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error);
+    });
+}
+
+function releaseUrls(urls) {
+    urls.forEach(url => URL.revokeObjectURL(url));
+    urls.length = 0;
+}
+
+function createMediaUrl(blob, bucket) {
+    const url = URL.createObjectURL(blob);
+    bucket.push(url);
+    return url;
+}
+
+function makeText(tag, text) {
+    const element = document.createElement(tag);
+    element.textContent = text;
+    return element;
+}
+
+/* REFRESH SAVED MEDIA */
+async function refreshMedia() {
+    try {
+        const all = await getAllMedia();
+
+        releaseUrls(videoObjectUrls);
+        releaseUrls(imageObjectUrls);
+
+        videos = all
+            .filter(item => item.type === "video")
+            .sort((a, b) => a.id - b.id);
+
+        images = all
+            .filter(item => item.type === "image")
+            .sort((a, b) => a.id - b.id);
+
+        videos.forEach(video => {
+            video.url = createMediaUrl(video.blob, videoObjectUrls);
+        });
+
+        images.forEach(image => {
+            image.url = createMediaUrl(image.blob, imageObjectUrls);
+        });
+
+        if (activeVideoId !== null &&
+            !videos.some(video => video.id === activeVideoId)) {
+            activeVideoId = null;
+
+            const player = document.getElementById("animePlayer");
+            player.pause();
+            player.removeAttribute("src");
+            player.load();
+
+            document.getElementById("nowPlaying").textContent =
+                "Choose a video from your playlist.";
+        }
+
+        renderVideos();
+        renderImages();
+
+        document.getElementById("videoStorageStatus").textContent =
+            videos.length + " saved video(s).";
+
+        document.getElementById("imageStorageStatus").textContent =
+            images.length + " saved image(s).";
+
+    } catch (error) {
+        document.getElementById("videoStorageStatus").textContent =
+            "Could not load saved videos.";
+
+        document.getElementById("imageStorageStatus").textContent =
+            "Could not load saved images.";
+    }
+}
+
+/* UPLOAD VIDEOS */
+document.getElementById("videoUpload").addEventListener("change", async event => {
+    const files = Array.from(event.target.files || []);
+    let count = 0;
+
+    for (const file of files) {
+        if (!file.type.startsWith("video/")) continue;
+
+        try {
+            await addMedia({
+                type: "video",
+                name: file.name,
+                mime: file.type,
+                size: file.size,
+                blob: file,
+                addedAt: Date.now()
+            });
+
+            count++;
+        } catch (error) {
+            document.getElementById("videoStorageStatus").textContent =
+                "Could not save " + file.name + ". Browser storage may be full.";
+            break;
+        }
+    }
+
+    event.target.value = "";
+    await refreshMedia();
+
+    if (count > 0) {
+        document.getElementById("videoStorageStatus").textContent =
+            count + " video(s) added. " + videos.length + " total.";
+    }
+});
+
+/* UPLOAD IMAGES */
+document.getElementById("imageUpload").addEventListener("change", async event => {
+    const files = Array.from(event.target.files || []);
+    let count = 0;
+
+    for (const file of files) {
+        if (!file.type.startsWith("image/")) continue;
+
+        try {
+            await addMedia({
+                type: "image",
+                name: file.name,
+                mime: file.type,
+                size: file.size,
+                blob: file,
+                addedAt: Date.now()
+            });
+
+            count++;
+        } catch (error) {
+            document.getElementById("imageStorageStatus").textContent =
+                "Could not save " + file.name + ". Browser storage may be full.";
+            break;
+        }
+    }
+
+    event.target.value = "";
+    await refreshMedia();
+
+    if (count > 0) {
+        document.getElementById("imageStorageStatus").textContent =
+            count + " image(s) added. " + images.length + " total.";
+    }
+});
+
+/* DISPLAY VIDEO PLAYLIST */
+function renderVideos() {
+    const container = document.getElementById("videoPlaylist");
+    container.replaceChildren();
+
+    if (!videos.length) {
+        container.appendChild(makeText(
+            "p", "Your playlist is empty. Upload videos above."
+        ));
+        return;
+    }
+
+    videos.forEach(video => {
+        const card = document.createElement("article");
+        card.style.cssText =
+            "background:#FFFBFF;border:1px solid #EADCF0;border-radius:12px;padding:13px;overflow-wrap:anywhere;";
+
+        const title = makeText("h3", video.name);
+        title.style.cssText = "font-size:15px;margin:0 0 10px;";
+
+        const play = document.createElement("button");
+        play.type = "button";
+        play.textContent = activeVideoId === video.id ? "▶ Selected" : "▶ Play";
+        play.style.cssText =
+            "border:0;border-radius:8px;padding:9px 12px;background:#7B4B94;color:white;cursor:pointer;margin-right:5px;margin-bottom:5px;";
+        play.addEventListener("click", () => playVideo(video.id));
+
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.textContent = "Remove";
+        remove.style.cssText =
+            "border:0;border-radius:8px;padding:9px 12px;background:#F7DDE8;color:#7A274B;cursor:pointer;margin-bottom:5px;";
+
+        remove.addEventListener("click", async () => {
+            await deleteMedia(video.id);
+            await refreshMedia();
+        });
+
+        card.append(title, play, remove);
+        container.appendChild(card);
+    });
+}
+
+/* VIDEO PLAYER CONTROLS */
+function playVideo(id) {
+    const video = videos.find(item => item.id === id);
+    if (!video) return;
+
+    activeVideoId = id;
+
+    const player = document.getElementById("animePlayer");
+    player.src = video.url;
+    player.load();
+    player.play().catch(() => {});
+
+    document.getElementById("nowPlaying").textContent =
+        "Now selected: " + video.name;
+
+    renderVideos();
+}
+
+function playNext() {
+    if (!videos.length) return;
+
+    let index = videos.findIndex(video => video.id === activeVideoId);
+    index = (index + 1 + videos.length) % videos.length;
+
+    playVideo(videos[index].id);
+}
+
+function playPrevious() {
+    if (!videos.length) return;
+
+    let index = videos.findIndex(video => video.id === activeVideoId);
+    if (index < 0) index = 0;
+
+    index = (index - 1 + videos.length) % videos.length;
+    playVideo(videos[index].id);
+}
+
+document.getElementById("animePlayer").addEventListener("ended", playNext);
+
+/* CLEAR PLAYLIST WITHOUT A POPUP */
+async function clearVideos() {
+    if (!videos.length) return;
+
+    await clearMediaType("video");
+    activeVideoId = null;
+
+    const player = document.getElementById("animePlayer");
+    player.pause();
+    player.removeAttribute("src");
+    player.load();
+
+    document.getElementById("nowPlaying").textContent =
+        "Choose a video from your playlist.";
+
+    await refreshMedia();
+}
+
+/* DISPLAY IMAGE GALLERY */
+function renderImages() {
+    const container = document.getElementById("imageGallery");
+    container.replaceChildren();
+
+    if (!images.length) {
+        container.appendChild(makeText(
+            "p", "Your gallery is empty. Upload images above."
+        ));
+        return;
+    }
+
+    images.forEach(image => {
+        const card = document.createElement("article");
+        card.style.cssText =
+            "background:#FFFBFF;border:1px solid #EADCF0;border-radius:12px;padding:8px;overflow:hidden;";
+
+        const img = document.createElement("img");
+        img.src = image.url;
+        img.alt = image.name;
+        img.loading = "lazy";
+        img.style.cssText =
+            "display:block;width:100%;height:190px;object-fit:cover;border-radius:8px;cursor:pointer;background:#F3DDF7;";
+        img.addEventListener("click", () =>
+            openImageViewer(images.findIndex(item => item.id === image.id))
+        );
+
+        const name = makeText("p", image.name);
+        name.style.cssText =
+            "font-size:13px;font-weight:bold;overflow-wrap:anywhere;margin:8px 2px;";
+
+        const view = document.createElement("button");
+        view.type = "button";
+        view.textContent = "View";
+        view.style.cssText =
+            "border:0;border-radius:8px;padding:8px 12px;background:#7B4B94;color:white;cursor:pointer;margin-right:5px;";
+        view.addEventListener("click", () =>
+            openImageViewer(images.findIndex(item => item.id === image.id))
+        );
+
+        const remove = document.createElement("button");
+        remove.type = "button";
+        remove.textContent = "Remove";
+        remove.style.cssText =
+            "border:0;border-radius:8px;padding:8px 12px;background:#F7DDE8;color:#7A274B;cursor:pointer;";
+
+        remove.addEventListener("click", async () => {
+            await deleteMedia(image.id);
+            await refreshMedia();
+        });
+
+        card.append(img, name, view, remove);
+        container.appendChild(card);
+    });
+}
+
+/* IMAGE VIEWER */
+function openImageViewer(index) {
+    if (index < 0 || index >= images.length) return;
+
+    viewerIndex = index;
+    updateViewer();
+
+    document.getElementById("imageViewer").style.display = "flex";
+}
+
+function updateViewer() {
+    const image = images[viewerIndex];
+    if (!image) return;
+
+    document.getElementById("viewerImage").src = image.url;
+    document.getElementById("viewerCaption").textContent =
+        image.name + " (" + (viewerIndex + 1) + " of " + images.length + ")";
+}
+
+function moveViewer(direction) {
+    if (!images.length) return;
+
+    viewerIndex = (viewerIndex + direction + images.length) % images.length;
+    updateViewer();
+}
+
+function closeImageViewer() {
+    document.getElementById("imageViewer").style.display = "none";
+    document.getElementById("viewerImage").removeAttribute("src");
+}
+
+document.getElementById("imageViewer").addEventListener("click", event => {
+    if (event.target.id === "imageViewer") {
+        closeImageViewer();
+    }
+});
+
+document.addEventListener("keydown", event => {
+    const viewer = document.getElementById("imageViewer");
+
+    if (viewer.style.display === "flex") {
+        if (event.key === "Escape") closeImageViewer();
+        if (event.key === "ArrowLeft") moveViewer(-1);
+        if (event.key === "ArrowRight") moveViewer(1);
+    }
+});
+
+/* START DATABASE */
+openMediaDB()
+    .then(refreshMedia)
+    .catch(() => {
+        document.getElementById("videoStorageStatus").textContent =
+            "Local storage is unavailable in this browser.";
+
+        document.getElementById("imageStorageStatus").textContent =
+            "Local storage is unavailable in this browser.";
+    });
+
+/* RELEASE TEMPORARY FILE URLS */
+window.addEventListener("beforeunload", () => {
+    releaseUrls(videoObjectUrls);
+    releaseUrls(imageObjectUrls);
+});
+</script>
+
+</body>
+</html>

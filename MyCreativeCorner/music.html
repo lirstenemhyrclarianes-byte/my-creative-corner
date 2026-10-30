@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Music Space</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#FFF7FC; font-family:Arial, Helvetica, sans-serif; color:#4B2E5F;">
+
+    <!-- HEADER -->
+    <header style="background-color:#D8B4E2; padding:30px 15px; text-align:center;">
+
+        <h1 style="margin:0; font-size:38px; color:#4B2E5F;">
+            🎵 MY MUSIC SPACE
+        </h1>
+
+        <p style="font-size:17px;">
+            Music • Art • Anime • Animation
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav style="background-color:#F3DDF7; text-align:center; padding:15px;">
+
+        <a href="myhome.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">HOME</a>
+
+        <a href="music.html" style="display:inline-block; background-color:#B04A7A; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">MUSIC</a>
+
+        <a href="singing.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">SINGING</a>
+
+        <a href="drawing.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">DRAWING</a>
+
+        <a href="anime.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIME</a>
+
+        <a href="animation.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIMATION</a>
+
+        <a href="about.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ABOUT ME</a>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main style="max-width:1000px; margin:40px auto; padding:20px;">
+
+        <!-- WHY I ENJOY MUSIC -->
+        <section style="background-color:white; padding:30px; border-radius:25px; text-align:center; box-shadow:0 5px 15px #E4D4E8;">
+
+            <h2 style="color:#B04A7A; font-size:30px;">
+                🎶 Why I Enjoy Music
+            </h2>
+
+            <img src="images/mu.jpg"
+                 alt="Music"
+                 style="width:100%; max-width:600px; height:300px; object-fit:cover; border-radius:20px;">
+
+            <p style="font-size:18px; line-height:1.7;">
+                Music is one of the things that makes me happy.
+                It helps me relax, express my emotions, and enjoy
+                different moments in life.
+            </p>
+
+        </section>
+
+
+        <!-- THINGS I ENJOY -->
+        <section style="margin-top:35px; padding:30px; background-color:#FCE7F3; border-radius:25px;">
+
+            <h2 style="text-align:center; color:#B04A7A;">
+                💗 Things I Enjoy About Music
+            </h2>
+
+            <div style="text-align:center;">
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>🎧 Listening</h3>
+                    <p>I enjoy listening to my favorite songs.</p>
+                </div>
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>💗 Relaxation</h3>
+                    <p>Music helps me feel calm and relaxed.</p>
+                </div>
+
+                <div style="display:inline-block; width:220px; vertical-align:top; margin:10px; padding:20px; background-color:white; border-radius:20px;">
+                    <h3>🌟 Inspiration</h3>
+                    <p>Some songs inspire me and make my day better.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MUSIC PLAYER AND PLAYLIST -->
+        <section style="margin-top:35px; background-color:#EADCF3; padding:30px; border-radius:25px; text-align:center;">
+
+            <h2 style="color:#7B4B94;">
+                🎵 My Favorite Music Playlist
+            </h2>
+
+            <p style="font-size:16px; line-height:1.7;">
+                Listen to my favorite songs or upload new music to my playlist!
+            </p>
+
+
+            <!-- AUDIO PLAYER -->
+            <audio id="musicPlayer"
+                   controls
+                   playsinline
+                   style="display:block; width:100%; max-width:800px; margin:20px auto;">
+
+                <source src="videos/re.mp3" type="audio/mpeg">
+
+                Your browser does not support the audio.
+
+            </audio>
+
+
+            <!-- CURRENT SONG TITLE -->
+            <h3 id="songTitle" style="color:#7B4B94; overflow-wrap:anywhere;">
+                🎶 My Favorite Song
+            </h3>
+
+
+            <!-- UPLOAD BUTTON -->
+            <div style="margin:25px 0;">
+
+                <label for="musicUpload"
+                       style="display:inline-block; background-color:#7B4B94; color:white; padding:14px 24px; border-radius:25px; cursor:pointer; margin:5px;">
+
+                    ➕ Upload Music
+
+                </label>
+
+                <input type="file"
+                       id="musicUpload"
+                       accept="audio/*"
+                       multiple
+                       style="display:none;">
+
+            </div>
+
+
+            <!-- PLAYLIST CONTAINER -->
+            <div style="max-width:800px; margin:20px auto; padding:20px; background-color:white; border-radius:20px; text-align:left;">
+
+                <h3 style="color:#B04A7A; text-align:center;">
+                    🎶 My Playlist
+                </h3>
+
+                <p id="playlistMessage" style="text-align:center; color:#7B4B94;">
+                    Your playlist is empty. Upload your favorite music!
+                </p>
+
+                <div id="playlist">
+
+                    <!-- UPLOADED SONGS WILL APPEAR HERE -->
+
+                </div>
+
+            </div>
+
+
+            <p style="font-size:14px; color:#4B2E5F; line-height:1.6;">
+                Note: Uploaded music is temporary. It will not remain
+                in the playlist after you reload the page.
+            </p>
+
+        </section>
+
+
+        <!-- A LITTLE REMINDER -->
+        <section style="margin-top:35px; background-color:#FFF0F6; padding:30px; border-radius:25px; text-align:center;">
+
+            <h2 style="color:#A64D78;">
+                🌷 A Little Reminder
+            </h2>
+
+            <p style="font-size:18px; line-height:1.7;">
+                Music makes ordinary moments special.
+                Enjoy every melody, express your feelings,
+                and never stop discovering new songs.
+            </p>
+
+        </section>
+
+
+        <!-- BACK TO HOME -->
+        <div style="text-align:center; margin-top:35px;">
+
+            <a href="myhome.html"
+               style="display:inline-block; background-color:#B04A7A; color:white; text-decoration:none; padding:14px 25px; border-radius:25px;">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer style="background-color:#D8B4E2; text-align:center; padding:25px; margin-top:50px;">
+
+        <p style="margin:0;">
+            © 2026 My Creative Corner
+        </p>
+
+    </footer>
+
+
+    <!-- PLAYLIST JAVASCRIPT -->
+    <script>
+
+        const player = document.getElementById("musicPlayer");
+        const songTitle = document.getElementById("songTitle");
+        const musicUpload = document.getElementById("musicUpload");
+        const playlist = document.getElementById("playlist");
+        const playlistMessage = document.getElementById("playlistMessage");
+
+        let uploadedSongs = [];
+
+
+        // PLAY A SELECTED SONG
+        function playSong(source, title) {
+
+            player.pause();
+            player.src = source;
+            player.load();
+
+            songTitle.textContent = "🎶 " + title;
+
+            player.play().catch(function () {
+                // Press the play button if playback does not start automatically.
+            });
+
+        }
+
+
+        // UPLOAD MUSIC
+        musicUpload.addEventListener("change", function () {
+
+            const files = Array.from(this.files);
+
+            files.forEach(function (file) {
+
+                if (!file.type.startsWith("audio/")) {
+                    return;
+                }
+
+                const musicURL = URL.createObjectURL(file);
+
+                const song = {
+                    name: file.name,
+                    url: musicURL
+                };
+
+                uploadedSongs.push(song);
+
+
+                // CREATE PLAYLIST ITEM
+                const item = document.createElement("div");
+
+                item.style.cssText =
+                    "padding:12px; background-color:#FCE7F3; border-radius:12px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;";
+
+
+                // PLAY BUTTON
+                const playButton = document.createElement("button");
+
+                playButton.type = "button";
+                playButton.textContent = "▶ " + file.name;
+
+                playButton.style.cssText =
+                    "background:none; border:none; color:#4B2E5F; cursor:pointer; font-size:15px; text-align:left; overflow-wrap:anywhere;";
+
+                playButton.addEventListener("click", function () {
+
+                    playSong(song.url, song.name);
+
+                });
+
+
+                // REMOVE BUTTON
+                const removeButton = document.createElement("button");
+
+                removeButton.type = "button";
+                removeButton.textContent = "✖ Remove";
+
+                removeButton.style.cssText =
+                    "background-color:#B04A7A; color:white; border:none; padding:8px 12px; border-radius:12px; cursor:pointer; flex-shrink:0;";
+
+                removeButton.addEventListener("click", function () {
+
+                    // Stop the song if it is currently selected.
+                    if (player.src === song.url) {
+
+                        player.pause();
+                        player.removeAttribute("src");
+                        player.load();
+
+                        songTitle.textContent = "🎶 Select a song";
+
+                    }
+
+                    // Release the temporary music URL.
+                    URL.revokeObjectURL(song.url);
+
+                    // Remove the song from the uploaded list.
+                    uploadedSongs = uploadedSongs.filter(function (item) {
+                        return item !== song;
+                    });
+
+                    // Remove the playlist item.
+                    item.remove();
+
+                    // Update playlist message.
+                    if (playlist.children.length === 0) {
+
+                        playlistMessage.textContent =
+                            "Your playlist is empty. Upload music to get started!";
+
+                    }
+
+                });
+
+
+                // ADD BUTTONS TO PLAYLIST ITEM
+                item.appendChild(playButton);
+                item.appendChild(removeButton);
+
+                playlist.appendChild(item);
+
+                playlistMessage.textContent =
+                    "Choose a song below to play it.";
+
+                // Automatically play the uploaded song.
+                playSong(song.url, song.name);
+
+            });
+
+            // Allow the same file to be selected again.
+            this.value = "";
+
+        });
+
+    </script>
+
+</body>
+</html>
+

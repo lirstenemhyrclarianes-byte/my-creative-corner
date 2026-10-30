@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Corner - Drawing</title>
+</head>
+
+<body style="margin:0; font-family:Arial, Helvetica, sans-serif; background-color:#FFF7FC; color:#4B2E5F;">
+
+    <!-- HEADER -->
+    <header style="background-color:#D8B4E2; text-align:center; padding:25px 15px;">
+        <h1 style="margin:0; color:#4B2E5F;">🎨 My Creative Corner</h1>
+        <p style="margin:8px 0 0;">Music • Art • Anime • Animation</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav style="background-color:#EADCF2; text-align:center; padding:15px 8px;">
+        <a href="myhome.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">Home</a>
+        <a href="music.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">Music</a>
+        <a href="singing.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">Singing</a>
+        <a href="drawing.html" style="color:#7B4B94; text-decoration:none; margin:8px; font-weight:bold;">Drawing</a>
+        <a href="anime.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">Anime</a>
+        <a href="animation.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">Animation</a>
+        <a href="about.html" style="color:#4B2E5F; text-decoration:none; margin:8px; font-weight:bold;">About</a>
+    </nav>
+
+    <!-- INTRODUCTION -->
+    <section style="padding:30px 20px; text-align:center;">
+        <h2 style="color:#7B4B94;">✏️ Welcome to My Drawing Space</h2>
+        <p style="max-width:750px; margin:0 auto; line-height:1.8;">
+            Drawing is one of the ways I express my imagination and creativity.
+            I enjoy creating different kinds of art, exploring new ideas, and
+            improving my drawing skills one step at a time.
+        </p>
+    </section>
+
+    <!-- WHY I LIKE DRAWING -->
+    <section style="padding:25px 20px; background-color:#F3E8FF; text-align:center;">
+        <h2 style="color:#7B4B94;">💜 Why I Like Drawing</h2>
+        <p style="max-width:750px; margin:0 auto; line-height:1.8;">
+            Drawing helps me express my thoughts, feelings, and imagination.
+            It allows me to turn simple ideas into something creative and meaningful.
+            Every drawing is an opportunity to learn something new.
+        </p>
+    </section>
+
+    <!-- MY DRAWINGS: EDIT THE IMAGE FILENAMES BELOW -->
+    <section style="padding:30px 20px; text-align:center;">
+        <h2 style="color:#7B4B94;">🖼️ My Drawings</h2>
+        <p style="line-height:1.7;">
+            Here are some drawings from my creative collection.
+        </p>
+
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:20px;">
+
+            <!-- DRAWING 1: CHANGE THIS FILENAME -->
+            <div style="background-color:#FFFFFF; padding:12px; border-radius:12px; box-shadow:0 3px 10px rgba(75,46,95,0.12); width:260px; max-width:85%; box-sizing:border-box;">
+
+                <img src="images/d1.jpg"
+                     alt="My Drawing 1"
+                     style="width:100%; height:240px; object-fit:contain; border-radius:8px;"
+                     onerror="this.alt='Image not found. Check the filename in the HTML code.';">
+
+                <h3 style="color:#7B4B94;">My Drawing 1</h3>
+            </div>
+
+            <!-- DRAWING 2: CHANGE THIS FILENAME -->
+            <div style="background-color:#FFFFFF; padding:12px; border-radius:12px; box-shadow:0 3px 10px rgba(75,46,95,0.12); width:260px; max-width:85%; box-sizing:border-box;">
+
+                <img src="images/d2.jpg"
+                     alt="My Drawing 2"
+                     style="width:100%; height:240px; object-fit:contain; border-radius:8px;"
+                     onerror="this.alt='Image not found. Check the filename in the HTML code.';">
+
+                <h3 style="color:#7B4B94;">My Drawing 2</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DRAWING INTERESTS -->
+    <section style="padding:25px 20px; background-color:#F3E8FF; text-align:center;">
+        <h2 style="color:#7B4B94;">🌷 My Drawing Interests</h2>
+
+        <div style="overflow-x:auto;">
+            <table style="width:90%; max-width:650px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF;">
+                <tr style="background-color:#D8B4E2;">
+                    <th style="padding:12px; border:1px solid #C7A3D5;">Drawing Style</th>
+                    <th style="padding:12px; border:1px solid #C7A3D5;">Why I Like It</th>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">Anime Art</td>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">I enjoy the characters and expressions.</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">Nature</td>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">I like drawing beautiful places and scenery.</td>
+                </tr>
+                <tr>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">Creative Designs</td>
+                    <td style="padding:12px; border:1px solid #DCCCE5;">I can explore my own ideas and imagination.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- GALLERY BUTTON AND GALLERY CONTENT -->
+    <section style="padding:25px 20px; background-color:#F3E8FF; text-align:center;">
+
+        <button id="galleryToggle"
+                type="button"
+                onclick="toggleGallery()"
+                style="background-color:#7B4B94; color:white; border:none; padding:13px 25px; border-radius:25px; font-size:16px; font-weight:bold; cursor:pointer;">
+            🖼️ GALLERY
+        </button>
+
+        <div id="gallerySection" style="display:none; padding-top:25px;">
+
+            <h2 style="color:#7B4B94;">🖼️ My Gallery</h2>
+
+            <p style="line-height:1.7;">
+                Upload your pictures here and browse them using the arrow buttons.
+            </p>
+
+            <label for="galleryUpload"
+                   style="display:inline-block; background-color:#7B4B94; color:white; padding:12px 22px; border-radius:20px; cursor:pointer; font-weight:bold;">
+                ➕ Upload Images
+            </label>
+
+            <input type="file"
+                   id="galleryUpload"
+                   accept="image/*"
+                   multiple
+                   style="display:none;">
+
+            <!-- UNDO AND REDO BUTTONS -->
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:18px 0;">
+
+                <button id="undoButton"
+                        type="button"
+                        onclick="undoGalleryChange()"
+                        disabled
+                        style="background-color:#EADCF2; color:#4B2E5F; border:1px solid #C7A3D5; padding:10px 18px; border-radius:20px; cursor:pointer; font-weight:bold; opacity:0.5;">
+                    ↶ Undo
+                </button>
+
+                <button id="redoButton"
+                        type="button"
+                        onclick="redoGalleryChange()"
+                        disabled
+                        style="background-color:#EADCF2; color:#4B2E5F; border:1px solid #C7A3D5; padding:10px 18px; border-radius:20px; cursor:pointer; font-weight:bold; opacity:0.5;">
+                    ↷ Redo
+                </button>
+
+            </div>
+
+            <p id="galleryMessage" style="font-size:14px;"></p>
+
+            <div id="galleryContainer"
+                 style="display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:18px; margin-top:20px;">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FULL-SCREEN GALLERY IMAGE VIEWER -->
+    <div id="imageViewer"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Gallery image viewer"
+         style="display:none; position:fixed; z-index:9999; inset:0; background:rgba(25,15,35,0.97); color:white; text-align:center; padding:15px; box-sizing:border-box;">
+
+        <div style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px;">
+
+            <div style="width:100%; display:flex; justify-content:flex-end;">
+                <button type="button"
+                        onclick="closeImageViewer()"
+                        style="background-color:#7B4B94; color:white; border:none; padding:10px 16px; border-radius:20px; cursor:pointer; font-size:15px;">
+                    ✕ Close
+                </button>
+            </div>
+
+            <p id="viewerImageName"
+               style="margin:5px; font-size:17px; overflow-wrap:anywhere;">
+            </p>
+
+            <div style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; flex:1; min-height:0;">
+
+                <button type="button"
+                        onclick="previousImage()"
+                        aria-label="Previous image"
+                        style="flex-shrink:0; background-color:#7B4B94; color:white; border:none; border-radius:50%; width:45px; height:45px; font-size:26px; cursor:pointer;">
+                    &#8592;
+                </button>
+
+                <img id="viewerImage"
+                     src=""
+                     alt="Selected gallery image"
+                     style="display:block; max-width:calc(100% - 110px); max-height:100%; width:auto; height:auto; object-fit:contain; border-radius:8px;">
+
+                <button type="button"
+                        onclick="nextImage()"
+                        aria-label="Next image"
+                        style="flex-shrink:0; background-color:#7B4B94; color:white; border:none; border-radius:50%; width:45px; height:45px; font-size:26px; cursor:pointer;">
+                    &#8594;
+                </button>
+
+            </div>
+
+            <p id="viewerImageCount" style="margin:0; font-size:14px;"></p>
+
+            <button type="button"
+                    onclick="closeImageViewer()"
+                    style="background-color:#EADCF2; color:#4B2E5F; border:none; padding:11px 22px; border-radius:22px; cursor:pointer; font-weight:bold; margin-bottom:8px;">
+                ↩ Back to Gallery
+            </button>
+
+        </div>
+    </div>
+
+    <!-- KEEP CREATING -->
+    <section style="padding:30px 20px; text-align:center;">
+        <h2 style="color:#7B4B94;">🌟 Keep Creating</h2>
+        <p style="max-width:700px; margin:0 auto; line-height:1.8;">
+            Art does not have to be perfect to be beautiful. Keep practicing,
+            stay creative, and enjoy every step of your artistic journey.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background-color:#D8B4E2; text-align:center; padding:18px;">
+        <p style="margin:0;">© 2026 My Creative Corner | Keep Creating 💜</p>
+    </footer>
+
+    <!-- INLINE JAVASCRIPT -->
+    <script>
+        const galleryKey = "myDrawingSpaceGallery";
+
+        let galleryImages = [];
+        let currentImageIndex = 0;
+
+        // Undo and Redo history.
+        let galleryHistory = [];
+        let galleryHistoryIndex = -1;
+
+        // Load previously saved Gallery images.
+        try {
+            const savedImages = localStorage.getItem(galleryKey);
+            galleryImages = savedImages ? JSON.parse(savedImages) : [];
+
+            if (!Array.isArray(galleryImages)) {
+                galleryImages = [];
+            }
+        } catch (error) {
+            galleryImages = [];
+        }
+
+        // Start history with the Gallery as it currently exists.
+        recordGalleryHistory();
+
+        // Save a snapshot after each Gallery change.
+        function recordGalleryHistory() {
+            const snapshot = JSON.parse(JSON.stringify(galleryImages));
+
+            // Remove redo history after a new change.
+            galleryHistory = galleryHistory.slice(0, galleryHistoryIndex + 1);
+            galleryHistory.push(snapshot);
+
+            // Keep only the latest 20 history states.
+            if (galleryHistory.length > 20) {
+                galleryHistory.shift();
+            }
+
+            galleryHistoryIndex = galleryHistory.length - 1;
+            updateUndoRedoButtons();
+        }
+
+        // Update the Undo and Redo buttons.
+        function updateUndoRedoButtons() {
+            const undoButton = document.getElementById("undoButton");
+            const redoButton = document.getElementById("redoButton");
+
+            if (!undoButton || !redoButton) return;
+
+            undoButton.disabled = galleryHistoryIndex <= 0;
+            redoButton.disabled = galleryHistoryIndex >= galleryHistory.length - 1;
+
+            undoButton.style.opacity = undoButton.disabled ? "0.5" : "1";
+            undoButton.style.cursor = undoButton.disabled ? "not-allowed" : "pointer";
+
+            redoButton.style.opacity = redoButton.disabled ? "0.5" : "1";
+            redoButton.style.cursor = redoButton.disabled ? "not-allowed" : "pointer";
+        }
+
+        // Restore a previous or next Gallery state.
+        function restoreGalleryHistory(index, message) {
+            if (index < 0 || index >= galleryHistory.length) return;
+
+            galleryHistoryIndex = index;
+            galleryImages = JSON.parse(
+                JSON.stringify(galleryHistory[galleryHistoryIndex])
+            );
+
+            saveGallery();
+            showGallery();
+            updateUndoRedoButtons();
+
+            document.getElementById("galleryMessage").textContent = message;
+
+            if (document.getElementById("imageViewer").style.display === "block") {
+                if (galleryImages.length === 0) {
+                    closeImageViewer();
+                } else {
+                    currentImageIndex = Math.min(
+                        currentImageIndex,
+                        galleryImages.length - 1
+                    );
+                    updateImageViewer();
+                }
+            }
+        }
+
+        // Undo the latest Gallery change.
+        function undoGalleryChange() {
+            if (galleryHistoryIndex <= 0) return;
+
+            restoreGalleryHistory(
+                galleryHistoryIndex - 1,
+                "↶ Last Gallery change undone."
+            );
+        }
+
+        // Redo a previously undone Gallery change.
+        function redoGalleryChange() {
+            if (galleryHistoryIndex >= galleryHistory.length - 1) return;
+
+            restoreGalleryHistory(
+                galleryHistoryIndex + 1,
+                "↷ Gallery change redone."
+            );
+        }
+
+        // Show or hide the Gallery.
+        function toggleGallery() {
+            const section = document.getElementById("gallerySection");
+            const button = document.getElementById("galleryToggle");
+
+            if (section.style.display === "none") {
+                section.style.display = "block";
+                button.textContent = "✕ CLOSE GALLERY";
+                showGallery();
+            } else {
+                closeImageViewer();
+                section.style.display = "none";
+                button.textContent = "🖼️ GALLERY";
+            }
+        }
+
+        // Save Gallery images in this browser.
+        function saveGallery() {
+            try {
+                localStorage.setItem(galleryKey, JSON.stringify(galleryImages));
+                return true;
+            } catch (error) {
+                document.getElementById("galleryMessage").textContent =
+                    "Browser storage is full or unavailable. Try fewer or smaller images.";
+                return false;
+            }
+        }
+
+        // Display Gallery image cards.
+        function showGallery() {
+            const container = document.getElementById("galleryContainer");
+            container.innerHTML = "";
+
+            if (galleryImages.length === 0) {
+                container.innerHTML =
+                    '<p style="width:100%; text-align:center;">Your gallery is empty. Upload some pictures to get started! 💜</p>';
+
+                return;
+            }
+
+            galleryImages.forEach(function(item, index) {
+                const card = document.createElement("div");
+
+                card.style.cssText =
+                    "background:white; padding:12px; border-radius:12px; width:220px; max-width:85%; box-shadow:0 3px 10px rgba(75,46,95,0.12); box-sizing:border-box;";
+
+                const image = document.createElement("img");
+                image.src = item.image;
+                image.alt = item.name || "Gallery image";
+                image.style.cssText =
+                    "width:100%; height:180px; object-fit:contain; border-radius:8px;";
+
+                const name = document.createElement("p");
+                name.textContent = item.name || "Untitled image";
+                name.style.cssText =
+                    "overflow-wrap:anywhere; font-size:14px;";
+
+                const viewButton = document.createElement("button");
+                viewButton.type = "button";
+                viewButton.textContent = "👁️ View";
+                viewButton.style.cssText =
+                    "background:#7B4B94; color:white; border:none; padding:9px 15px; border-radius:18px; cursor:pointer; margin:4px;";
+
+                viewButton.onclick = function() {
+                    openGalleryImage(index);
+                };
+
+                const deleteButton = document.createElement("button");
+                deleteButton.type = "button";
+                deleteButton.textContent = "🗑️ Delete";
+                deleteButton.style.cssText =
+                    "background:#EADCF2; color:#4B2E5F; border:none; padding:9px 12px; border-radius:18px; cursor:pointer; margin:4px;";
+
+                deleteButton.onclick = function() {
+                    deleteGalleryImage(index);
+                };
+
+                card.appendChild(image);
+                card.appendChild(name);
+                card.appendChild(viewButton);
+                card.appendChild(deleteButton);
+
+                container.appendChild(card);
+            });
+        }
+
+        // Upload multiple images to the Gallery.
+        document.getElementById("galleryUpload").addEventListener("change", function(event) {
+            const files = Array.from(event.target.files || []);
+            const message = document.getElementById("galleryMessage");
+
+            if (files.length === 0) return;
+
+            message.textContent = "Preparing your images...";
+
+            let completed = 0;
+            let added = 0;
+
+            files.forEach(function(file) {
+                if (!file.type.startsWith("image/")) {
+                    completed++;
+
+                    if (completed === files.length) {
+                        finishUpload();
+                    }
+
+                    return;
+                }
+
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    galleryImages.push({
+                        name: file.name,
+                        image: e.target.result
+                    });
+
+                    added++;
+                    completed++;
+
+                    if (completed === files.length) {
+                        finishUpload();
+                    }
+                };
+
+                reader.onerror = function() {
+                    completed++;
+
+                    if (completed === files.length) {
+                        finishUpload();
+                    }
+                };
+
+                reader.readAsDataURL(file);
+            });
+
+            function finishUpload() {
+                if (added > 0) {
+                    recordGalleryHistory();
+                }
+
+                const saved = saveGallery();
+                showGallery();
+
+                if (saved) {
+                    message.textContent = added > 0
+                        ? added + " image(s) added to your gallery! 💜"
+                        : "No images were added. Please choose valid image files.";
+                }
+
+                event.target.value = "";
+            }
+        });
+
+        // Open an uploaded Gallery image in the viewer.
+        function openGalleryImage(index) {
+            if (index < 0 || index >= galleryImages.length) return;
+
+            currentImageIndex = index;
+
+            document.getElementById("imageViewer").style.display = "block";
+            document.body.style.overflow = "hidden";
+
+            updateImageViewer();
+        }
+
+        // Update the image and counter in the viewer.
+        function updateImageViewer() {
+            if (galleryImages.length === 0) {
+                closeImageViewer();
+                return;
+            }
+
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = 0;
+            }
+
+            if (currentImageIndex < 0) {
+                currentImageIndex = galleryImages.length - 1;
+            }
+
+            const item = galleryImages[currentImageIndex];
+
+            document.getElementById("viewerImage").src = item.image;
+            document.getElementById("viewerImage").alt =
+                item.name || "Gallery image";
+
+            document.getElementById("viewerImageName").textContent =
+                item.name || "Untitled image";
+
+            document.getElementById("viewerImageCount").textContent =
+                (currentImageIndex + 1) + " / " + galleryImages.length;
+        }
+
+        // Navigate to the previous Gallery image.
+        function previousImage() {
+            if (galleryImages.length === 0) return;
+
+            currentImageIndex =
+                (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+
+            updateImageViewer();
+        }
+
+        // Navigate to the next Gallery image.
+        function nextImage() {
+            if (galleryImages.length === 0) return;
+
+            currentImageIndex =
+                (currentImageIndex + 1) % galleryImages.length;
+
+            updateImageViewer();
+        }
+
+        // Close the viewer.
+        function closeImageViewer() {
+            document.getElementById("imageViewer").style.display = "none";
+            document.getElementById("viewerImage").src = "";
+            document.body.style.overflow = "";
+        }
+
+        // Delete immediately without a confirmation popup.
+        function deleteGalleryImage(index) {
+            if (!galleryImages[index]) return;
+
+            galleryImages.splice(index, 1);
+
+            // Save the deletion in history so Undo can restore it.
+            recordGalleryHistory();
+
+            saveGallery();
+            showGallery();
+
+            document.getElementById("galleryMessage").textContent =
+                "Image deleted. Use Undo if you want to bring it back.";
+
+            if (currentImageIndex >= galleryImages.length) {
+                currentImageIndex = Math.max(0, galleryImages.length - 1);
+            }
+
+            if (document.getElementById("imageViewer").style.display === "block") {
+                if (galleryImages.length === 0) {
+                    closeImageViewer();
+                } else {
+                    updateImageViewer();
+                }
+            }
+        }
+
+        // Keyboard controls for the Gallery viewer.
+        document.addEventListener("keydown", function(event) {
+            if (document.getElementById("imageViewer").style.display !== "block") {
+                return;
+            }
+
+            if (event.key === "ArrowRight") {
+                event.preventDefault();
+                nextImage();
+            } else if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                previousImage();
+            } else if (event.key === "Escape") {
+                closeImageViewer();
+            }
+        });
+    </script>
+
+</body>
+</html>
