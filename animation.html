@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation World</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#FFF7FC; font-family:Arial, Helvetica, sans-serif; color:#4B2E5F;">
+
+    <header style="background-color:#D8B4E2; padding:30px 15px; text-align:center;">
+        <h1 style="margin:0; font-size:38px; color:#4B2E5F;">🎬 ANIMATION WORLD</h1>
+        <p style="font-size:17px;">Music • Art • Anime • Animation</p>
+    </header>
+
+    <nav style="background-color:#F3DDF7; text-align:center; padding:15px;">
+        <a href="myhome.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">HOME</a>
+        <a href="music.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">MUSIC</a>
+        <a href="singing.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">SINGING</a>
+        <a href="drawing.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">DRAWING</a>
+        <a href="anime.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIME</a>
+        <a href="animation.html" style="display:inline-block; background-color:#438C87; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ANIMATION</a>
+        <a href="about.html" style="display:inline-block; background-color:#7B4B94; color:white; text-decoration:none; padding:12px 18px; margin:5px; border-radius:20px;">ABOUT ME</a>
+    </nav>
+
+    <main style="max-width:1000px; margin:40px auto; padding:20px;">
+
+        <section style="background-color:white; padding:30px; border-radius:25px; text-align:center; box-shadow:0 5px 15px #D2E5E3;">
+            <h2 style="font-size:30px; color:#438C87;">🎞️ What Is Animation?</h2>
+
+            <img src="images/Gojo!!_.jpg"
+                 alt="Animation"
+                 style="width:100%; max-width:650px; height:330px; object-fit:cover; border-radius:20px;">
+
+            <p style="font-size:18px; line-height:1.7;">
+                Animation is the process of creating the illusion of movement
+                by showing images or drawings in sequence.
+            </p>
+        </section>
+
+        <section style="margin-top:35px; padding:30px; background-color:#E4F7F5; border-radius:25px;">
+            <h2 style="text-align:center; color:#438C87;">🎨 Parts of Animation</h2>
+
+            <table style="width:100%; border-collapse:collapse; text-align:center;">
+                <tr style="background-color:#BEE3DF;">
+                    <th style="padding:15px;">Part</th>
+                    <th style="padding:15px;">Meaning</th>
+                </tr>
+                <tr>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">Character</td>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">The person, animal, or object being animated.</td>
+                </tr>
+                <tr>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">Movement</td>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">The action or motion shown in the animation.</td>
+                </tr>
+                <tr>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">Background</td>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">The environment where the scene happens.</td>
+                </tr>
+                <tr>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">Sound</td>
+                    <td style="padding:15px; border:1px solid #CFE4E2;">Music, voices, and effects that support the scene.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section style="margin-top:35px; padding:30px; background-color:white; border-radius:25px; text-align:center;">
+            <h2 style="color:#438C87;">💡 Why Animation Interests Me</h2>
+            <p style="font-size:18px; line-height:1.7;">
+                Animation combines drawing, storytelling, movement,
+                technology, and imagination. That is why I find it
+                interesting to learn about.
+            </p>
+        </section>
+
+        <section style="margin-top:35px; padding:30px; background-color:#E4F7F5; border-radius:25px; text-align:center;">
+            <h2 style="color:#438C87;">🎥 My Animation Playlist</h2>
+
+            <p>Select video files from your device to add them to your playlist.</p>
+
+            <label for="videoUpload"
+                   style="display:inline-block; background-color:#438C87; color:white; padding:12px 20px; margin:10px; border-radius:20px; cursor:pointer;">
+                ➕ Add Videos
+            </label>
+
+            <input type="file"
+                   id="videoUpload"
+                   accept="video/*"
+                   multiple
+                   style="display:none;">
+
+            <p id="uploadMessage" aria-live="polite" style="font-size:15px; overflow-wrap:anywhere;"></p>
+
+            <video id="videoPreview"
+                   controls
+                   playsinline
+                   preload="metadata"
+                   style="display:none; width:100%; max-width:700px; aspect-ratio:16 / 9; object-fit:contain; background-color:#2E2440; border-radius:20px; margin:15px auto 0;">
+            </video>
+
+            <div style="margin:15px;">
+                <button type="button" id="previousButton"
+                        style="background-color:#7B4B94; color:white; border:0; padding:10px 16px; margin:5px; border-radius:18px; cursor:pointer;">
+                    ⏮ Previous
+                </button>
+
+                <button type="button" id="nextButton"
+                        style="background-color:#7B4B94; color:white; border:0; padding:10px 16px; margin:5px; border-radius:18px; cursor:pointer;">
+                    Next ⏭
+                </button>
+
+                <button type="button" id="clearButton"
+                        style="background-color:#B84A62; color:white; border:0; padding:10px 16px; margin:5px; border-radius:18px; cursor:pointer;">
+                    Clear Playlist
+                </button>
+            </div>
+
+            <h3 style="color:#438C87; margin-top:30px;">📃 Playlist</h3>
+
+            <ul id="playlist"
+                style="list-style:none; padding:0; max-width:700px; margin:0 auto; text-align:left;">
+            </ul>
+        </section>
+
+        <div style="text-align:center; margin-top:35px;">
+            <a href="myhome.html"
+               style="display:inline-block; background-color:#438C87; color:white; text-decoration:none; padding:14px 25px; border-radius:25px;">
+                ← Back to Home
+            </a>
+        </div>
+
+    </main>
+
+    <footer style="background-color:#D8B4E2; text-align:center; padding:25px; margin-top:50px;">
+        <p style="margin:0;">© 2026 My Creative Corner</p>
+    </footer>
+
+    <script>
+        const videoUpload = document.getElementById("videoUpload");
+        const videoPreview = document.getElementById("videoPreview");
+        const uploadMessage = document.getElementById("uploadMessage");
+        const playlist = document.getElementById("playlist");
+
+        const previousButton = document.getElementById("previousButton");
+        const nextButton = document.getElementById("nextButton");
+        const clearButton = document.getElementById("clearButton");
+
+        const databaseName = "AnimationWorldVideoDB";
+        const storeName = "videos";
+
+        let database;
+        let videos = [];
+        let currentIndex = -1;
+        let currentVideoUrl = null;
+
+        function openDatabase() {
+            return new Promise((resolve, reject) => {
+                if (!("indexedDB" in window)) {
+                    reject(new Error("Browser storage is not supported."));
+                    return;
+                }
+
+                const request = indexedDB.open(databaseName, 1);
+
+                request.onupgradeneeded = function () {
+                    const db = request.result;
+
+                    if (!db.objectStoreNames.contains(storeName)) {
+                        db.createObjectStore(storeName, {
+                            keyPath: "id",
+                            autoIncrement: true
+                        });
+                    }
+                };
+
+                request.onsuccess = function () {
+                    resolve(request.result);
+                };
+
+                request.onerror = function () {
+                    reject(request.error);
+                };
+            });
+        }
+
+        function getAllVideos() {
+            return new Promise((resolve, reject) => {
+                const transaction = database.transaction(storeName, "readonly");
+                const request = transaction.objectStore(storeName).getAll();
+
+                request.onsuccess = () => resolve(request.result);
+                request.onerror = () => reject(request.error);
+            });
+        }
+
+        function saveVideo(file) {
+            return new Promise((resolve, reject) => {
+                const transaction = database.transaction(storeName, "readwrite");
+
+                transaction.objectStore(storeName).add({
+                    name: file.name,
+                    type: file.type,
+                    size: file.size,
+                    blob: file,
+                    addedAt: Date.now()
+                });
+
+                transaction.oncomplete = () => resolve();
+                transaction.onerror = () => reject(transaction.error);
+                transaction.onabort = () => reject(transaction.error);
+            });
+        }
+
+        function deleteVideo(id) {
+            return new Promise((resolve, reject) => {
+                const transaction = database.transaction(storeName, "readwrite");
+
+                transaction.objectStore(storeName).delete(id);
+
+                transaction.oncomplete = () => resolve();
+                transaction.onerror = () => reject(transaction.error);
+                transaction.onabort = () => reject(transaction.error);
+            });
+        }
+
+        function clearSavedVideos() {
+            return new Promise((resolve, reject) => {
+                const transaction = database.transaction(storeName, "readwrite");
+
+                transaction.objectStore(storeName).clear();
+
+                transaction.oncomplete = () => resolve();
+                transaction.onerror = () => reject(transaction.error);
+                transaction.onabort = () => reject(transaction.error);
+            });
+        }
+
+        function releaseCurrentVideo() {
+            videoPreview.pause();
+            videoPreview.removeAttribute("src");
+            videoPreview.load();
+            videoPreview.style.display = "none";
+
+            if (currentVideoUrl) {
+                URL.revokeObjectURL(currentVideoUrl);
+                currentVideoUrl = null;
+            }
+
+            currentIndex = -1;
+        }
+
+        function playVideo(index) {
+            if (index < 0 || index >= videos.length) {
+                return;
+            }
+
+            const video = videos[index];
+
+            if (currentVideoUrl) {
+                URL.revokeObjectURL(currentVideoUrl);
+                currentVideoUrl = null;
+            }
+
+            videoPreview.pause();
+
+            currentVideoUrl = URL.createObjectURL(video.blob);
+            videoPreview.src = currentVideoUrl;
+            videoPreview.style.display = "block";
+            currentIndex = index;
+
+            videoPreview.load();
+            videoPreview.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            uploadMessage.textContent = "Selected: " + video.name;
+
+            videoPreview.play().catch(() => {
+                uploadMessage.textContent =
+                    "Ready to play: " + video.name +
+                    ". Press the play button on the video player.";
+            });
+
+            renderPlaylist();
+        }
+
+        function renderPlaylist() {
+            playlist.replaceChildren();
+
+            if (videos.length === 0) {
+                const emptyMessage = document.createElement("li");
+                emptyMessage.textContent = "Your playlist is empty. Add some videos!";
+                emptyMessage.style.cssText =
+                    "background-color:white; padding:15px; margin:8px 0; border-radius:15px; text-align:center;";
+                playlist.appendChild(emptyMessage);
+                return;
+            }
+
+            videos.forEach((video, index) => {
+                const item = document.createElement("li");
+
+                item.style.cssText =
+                    "display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px; " +
+                    "background-color:white; padding:12px 15px; margin:8px 0; border-radius:15px; " +
+                    "box-shadow:0 2px 6px #CFE4E2;";
+
+                const playButton = document.createElement("button");
+                playButton.type = "button";
+                playButton.textContent =
+                    (index === currentIndex ? "▶ Playing: " : "▶ ") + video.name;
+
+                playButton.style.cssText =
+                    "flex:1; min-width:150px; text-align:left; overflow-wrap:anywhere; " +
+                    "background:none; border:0; color:#4B2E5F; font-size:15px; " +
+                    "padding:8px; cursor:pointer;";
+
+                playButton.addEventListener("click", () => playVideo(index));
+
+                const removeButton = document.createElement("button");
+                removeButton.type = "button";
+                removeButton.textContent = "Remove";
+
+                removeButton.style.cssText =
+                    "background-color:#7B4B94; color:white; border:0; padding:9px 12px; " +
+                    "border-radius:15px; cursor:pointer;";
+
+                removeButton.addEventListener("click", async () => {
+                    const removedVideo = videos[index];
+
+                    try {
+                        if (index === currentIndex) {
+                            releaseCurrentVideo();
+                        } else if (index < currentIndex) {
+                            currentIndex--;
+                        }
+
+                        await deleteVideo(removedVideo.id);
+                        await loadPlaylist();
+
+                        uploadMessage.textContent =
+                            "Removed: " + removedVideo.name;
+                    } catch (error) {
+                        uploadMessage.textContent =
+                            "Could not remove this video. Please try again.";
+                    }
+                });
+
+                item.appendChild(playButton);
+                item.appendChild(removeButton);
+                playlist.appendChild(item);
+            });
+        }
+
+        async function loadPlaylist() {
+            try {
+                videos = await getAllVideos();
+                renderPlaylist();
+            } catch (error) {
+                uploadMessage.textContent =
+                    "Could not load saved videos from browser storage.";
+            }
+        }
+
+        videoUpload.addEventListener("change", async function () {
+            const files = Array.from(this.files);
+            const validFiles = files.filter(file => file.type.startsWith("video/"));
+            const invalidCount = files.length - validFiles.length;
+
+            if (files.length === 0) {
+                return;
+            }
+
+            if (validFiles.length === 0) {
+                uploadMessage.textContent = "Please select valid video files.";
+                this.value = "";
+                return;
+            }
+
+            uploadMessage.textContent = "Saving your videos...";
+
+            let savedCount = 0;
+
+            for (const file of validFiles) {
+                try {
+                    await saveVideo(file);
+                    savedCount++;
+                } catch (error) {
+                    uploadMessage.textContent =
+                        "Some videos could not be saved. Your browser storage may be full.";
+                }
+            }
+
+            await loadPlaylist();
+
+            if (savedCount > 0) {
+                uploadMessage.textContent =
+                    savedCount + " video(s) added and saved in this browser.";
+            }
+
+            if (invalidCount > 0) {
+                uploadMessage.textContent +=
+                    " " + invalidCount + " non-video file(s) skipped.";
+            }
+
+            this.value = "";
+        });
+
+        previousButton.addEventListener("click", function () {
+            if (videos.length === 0) {
+                uploadMessage.textContent = "Add a video to your playlist first.";
+                return;
+            }
+
+            const previousIndex =
+                currentIndex <= 0 ? videos.length - 1 : currentIndex - 1;
+
+            playVideo(previousIndex);
+        });
+
+        nextButton.addEventListener("click", function () {
+            if (videos.length === 0) {
+                uploadMessage.textContent = "Add a video to your playlist first.";
+                return;
+            }
+
+            const nextIndex =
+                currentIndex < 0 || currentIndex >= videos.length - 1
+                    ? 0
+                    : currentIndex + 1;
+
+            playVideo(nextIndex);
+        });
+
+        videoPreview.addEventListener("ended", function () {
+            if (videos.length > 1) {
+                const nextIndex = (currentIndex + 1) % videos.length;
+                playVideo(nextIndex);
+            }
+        });
+
+        clearButton.addEventListener("click", async function () {
+            try {
+                await clearSavedVideos();
+                releaseCurrentVideo();
+                videos = [];
+                renderPlaylist();
+                uploadMessage.textContent = "Your playlist has been cleared.";
+            } catch (error) {
+                uploadMessage.textContent =
+                    "Could not clear the playlist. Please try again.";
+            }
+        });
+
+        async function initializePlaylist() {
+            try {
+                database = await openDatabase();
+                await loadPlaylist();
+
+                if (videos.length > 0) {
+                    uploadMessage.textContent =
+                        videos.length + " saved video(s) loaded from your browser.";
+                } else {
+                    uploadMessage.textContent =
+                        "Your playlist is ready. Add your first video!";
+                }
+            } catch (error) {
+                uploadMessage.textContent =
+                    "Browser storage is unavailable. Try opening this page in a modern browser.";
+                videoUpload.disabled = true;
+            }
+        }
+
+        window.addEventListener("beforeunload", function () {
+            if (currentVideoUrl) {
+                URL.revokeObjectURL(currentVideoUrl);
+            }
+        });
+
+        initializePlaylist();
+    </script>
+
+</body>
+</html>
